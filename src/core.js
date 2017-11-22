@@ -1,7 +1,7 @@
 // @flow
-import CryptoMakerParser from './parser';
+import CryptoScanParser from './parser';
 
-class CryptoMakerCore extends CryptoMakerParser {
+class CryptoScanCore extends CryptoScanParser {
   config: Object;
   tokens: Object;
   feed: Object;
@@ -52,4 +52,4 @@ class CryptoMakerCore extends CryptoMakerParser {
 
 }
 
-export default CryptoMakerCore;
+export default CryptoScanCore;

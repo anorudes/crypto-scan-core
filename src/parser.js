@@ -5,7 +5,7 @@ import { removeHtmlTags } from './utils/html';
 const REDDIT_RSS_URL = 'https://www.reddit.com/r/%SLUG%.rss';
 const TWITTER_RSS_URL = 'https://twitrss.me/twitter_user_to_rss/?user=%SLUG%';
 
-class CryptoMakerParser {
+class CryptoScanParser {
   config: Object;
 
   constructor(config: Object) {
@@ -116,4 +116,4 @@ class CryptoMakerParser {
   }
 }
 
-export default CryptoMakerParser;
+export default CryptoScanParser;

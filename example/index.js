@@ -1,13 +1,13 @@
 // This is just an example
 
-import CryptoMakerCore from '../src/';
+import CryptoScanCore from '../src/';
 import CONFIG from './config.json';
 
 const FEED_INTERVAL = 5 * 60000;
 const COINMARKET_INTERVAL = 5 * 60000;
 const PRINT_INTERVAL = 10 * 60000;
 
-const cryptoMaker = new CryptoMakerCore(CONFIG);
+const cryptoMaker = new CryptoScanCore(CONFIG);
 
 async function start() {
   const feed = await cryptoMaker.parseFeed();

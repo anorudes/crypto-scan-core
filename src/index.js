@@ -1,8 +1,8 @@
-import CryptoMakerCore from './core';
-import CryptoMakerParser from './parser';
+import CryptoScanCore from './core';
+import CryptoScanParser from './parser';
 
 export {
-  CryptoMakerParser,
+  CryptoScanParser,
 };
 
-export default CryptoMakerCore;
+export default CryptoScanCore;
