@@ -50,7 +50,7 @@ class CryptoScanCore extends CryptoScanParser {
     list.map(async (tokenData: Object, index: number) => {
       const tokenName: string = tokenData.coinmarketSlug;
       const coinmarketSlug: string = tokenData.coinmarketSlug;
-      
+
       setTimeout(async () => {
         const coinmarketData = await axios.get(COINMARKET_ENDPOINT + coinmarketSlug);
 

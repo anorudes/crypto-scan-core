@@ -9,6 +9,9 @@ async function start() {
   // We set the interval in the config equal to 30 sec
   // Therefore the data of each next token will be taken after delay
   cryptoMaker.parseFeed();
+
+  // We set the interval in the config equal to 10 sec
+  // Therefore the data of each next token will be taken after delay
   cryptoMaker.updateTokensPrice();
 
   // First, there'll be many tokens with undefined data,

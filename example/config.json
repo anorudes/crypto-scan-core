@@ -1,7 +1,7 @@
 {
   "interval": {
     "feed": 30000,
-    "coinmarket": 30000
+    "coinmarket": 10000
   },
    "list": [
       {
