@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/broteeshkies/crypto-scan-core"
+    "url": "https://github.com/anorudes/crypto-scan-core"
   },
   "license": "MIT",
   "devDependencies": {
