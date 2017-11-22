@@ -1,0 +1,25 @@
+{
+   "list": [
+      {
+         "name": "iExec",
+         "tokenName": "rlc",
+         "coinmarketcapTokenName": "rlc",
+         "feed": {
+            "reddit": [
+               {
+                  "slug": "iexec",
+                  "filterBy": {
+                    "users": ["/u/jbrg"],
+                    "regexes": [""],
+                    "keywords": [""]
+                  }
+               }
+            ],
+           "twitter": [{
+             "slug": "iex_ec"
+           }],
+           "slack": []
+         }
+      }
+   ]
+}
