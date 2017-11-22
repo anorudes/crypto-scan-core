@@ -20,7 +20,7 @@ class CryptoScanCore extends CryptoScanParser {
     this.priceByToken = {};
   }
 
-  async parseFeed() {
+  async parseTokensFeed() {
     const list: Array<Object> = this.config.list;
     const parseInterval: number = this.config.interval.feed;
 
@@ -70,7 +70,6 @@ class CryptoScanCore extends CryptoScanParser {
   }
 
   getResult(): Array<Object> {
-    // Return result of magic
     const list: Array<Object> = this.config.list;
     const result = [];
 

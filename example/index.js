@@ -6,11 +6,11 @@ import CONFIG from './config.json';
 const cryptoMaker = new CryptoScanCore(CONFIG);
 
 async function start() {
-  // We set the interval in the config equal to 30 sec
+  // We set the interval parse feed in the config equal to 30 sec
   // Therefore the data of each next token will be taken after delay
-  cryptoMaker.parseFeed();
+  cryptoMaker.parseTokensFeed();
 
-  // We set the interval in the config equal to 10 sec
+  // We set the interval parse coinmarket in the config equal to 10 sec
   // Therefore the data of each next token will be taken after delay
   cryptoMaker.updateTokensPrice();
 
