@@ -17,10 +17,10 @@ example/config.json
 - [x] Filter by users
 - [ ] Filter by regexes
 - [ ] Filter by keywords
-- [ ] Init Crypto-scan-web-app
-- [ ] Init Crypto-scan-web-api
 - [ ] Get price from coinmarketapp
 - [ ] Replace reddit/twitter rss parser with api
 - [ ] Get likes, comments
 - [ ] Add slack parser
+- [ ] Init Crypto-scan-web-app
+- [ ] Init Crypto-scan-web-api
 
