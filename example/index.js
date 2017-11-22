@@ -3,31 +3,19 @@
 import CryptoScanCore from '../src/';
 import CONFIG from './config.json';
 
-const FEED_INTERVAL = 5 * 60000;
-const COINMARKET_INTERVAL = 5 * 60000;
-const PRINT_INTERVAL = 10 * 60000;
-
 const cryptoMaker = new CryptoScanCore(CONFIG);
 
 async function start() {
-  const feed = await cryptoMaker.parseFeed();
-  console.log(feed);
+  // We set the interval in the config equal to 30 sec
+  // Therefore the data of each next token will be taken after delay
+  cryptoMaker.parseFeed();
+  cryptoMaker.updateTokensPrice();
 
-  // cryptoMaker.parseFeed()
-  // cryptoMaker.updateTokensPrice();
-  // console.log(cryptoMaker.getResult());
-
-  setInterval(() => {
-    cryptoMaker.parseFeed();
-  }, FEED_INTERVAL);
-
-  setInterval(() => {
-    cryptoMaker.updateTokensPrice();
-  }, COINMARKET_INTERVAL);
-
+  // First, there'll be many tokens with undefined data,
+  // because only the first token parsed after first call
   setInterval(() => {
     console.log(cryptoMaker.getResult());
-  }, PRINT_INTERVAL);
+  }, 40000);
 }
 
 start();

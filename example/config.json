@@ -1,25 +1,186 @@
 {
+  "interval": {
+    "feed": 30000,
+    "coinmarket": 30000
+  },
    "list": [
       {
          "name": "iExec",
          "tokenName": "rlc",
-         "coinmarketcapTokenName": "rlc",
+         "coinmarketSlug": "rlc",
          "feed": {
             "reddit": [
                {
                   "slug": "iexec",
                   "filterBy": {
-                    "users": ["/u/jbrg"],
-                    "regexes": [""],
-                    "keywords": [""]
+                    "users": ["/u/jbrg"]
                   }
                }
             ],
            "twitter": [{
              "slug": "iex_ec"
-           }],
-           "slack": []
+           }]
          }
-      }
+      },
+
+     {
+        "name": "Kin",
+        "tokenName": "kin",
+        "coinmarketSlug": "kin",
+        "feed": {
+           "reddit": [
+              {
+                 "slug": "KinFoundation",
+                 "filterBy": {
+                   "users": ["/u/yoelri"]
+                 }
+              }
+           ],
+          "twitter": [{
+            "slug": "kin_foundation"
+          }],
+          "slack": []
+        }
+     },
+
+     {
+        "name": "Ripio Credit Network",
+        "tokenName": "rcn",
+        "coinmarketSlug": "ripio-credit-network",
+        "feed": {
+           "reddit": [
+              {
+                 "slug": "RipioCreditNetwork"
+              }
+           ],
+          "twitter": [{
+            "slug": "rcn_token"
+          }]
+        }
+     },
+
+     {
+        "name": "FairCoin",
+        "tokenName": "fair",
+        "coinmarketSlug": "faircoin",
+        "feed": {
+           "reddit": [
+              {
+                 "slug": "faircoin"
+              }
+           ],
+          "twitter": [{
+            "slug": "faircointeam"
+          }],
+          "slack": []
+        }
+     },
+
+     {
+        "name": "Nav",
+        "tokenName": "nav",
+        "coinmarketSlug": "nav-coin",
+        "feed": {
+           "reddit": [
+              {
+                 "slug": "NavCoin"
+              }
+           ],
+          "twitter": [{
+            "slug": "NavCoin"
+          }]
+        }
+     },
+
+     {
+        "name": "ChainLink",
+        "tokenName": "link",
+        "coinmarketSlug": "chainlink",
+        "feed": {
+           "reddit": [
+              {
+                 "slug": "LINKTrader"
+              },
+             {
+               "slug": "Chainlink"
+             }
+           ]
+        }
+     },
+
+     {
+        "name": "Monaco",
+        "tokenName": "mco",
+        "coinmarketSlug": "monaco",
+        "feed": {
+           "reddit": [
+              {
+                 "slug": "MonacoCard"
+              }
+           ],
+          "twitter": [{
+            "slug": "monaco_card"
+          }]
+        }
+     },
+
+     {
+        "name": "I/O Coin",
+        "tokenName": "ioc",
+        "coinmarketSlug": "iocoin",
+        "feed": {
+           "reddit": [
+              {
+                 "slug": "IODigitalCurrency"
+              }
+           ],
+          "twitter": [{
+            "slug": "io_coin"
+          }]
+        }
+     },
+
+     {
+        "name": "Achain",
+        "tokenName": "act",
+        "coinmarketSlug": "achain",
+        "feed": {
+          "twitter": [{
+            "slug": "achainofficial"
+          }]
+        }
+     },
+
+     {
+        "name": "KuCoin Shares",
+        "tokenName": "kcs",
+        "coinmarketSlug": "kucoin-shares",
+        "feed": {
+           "reddit": [
+              {
+                 "slug": "kucoin"
+              }
+           ],
+          "twitter": [{
+            "slug": "kucoincom"
+          }]
+        }
+     },
+
+     {
+        "name": "Nexus",
+        "tokenName": "nxc",
+        "coinmarketSlug": "nexus",
+        "feed": {
+           "reddit": [
+              {
+                 "slug": "nexusearth"
+              }
+           ],
+          "twitter": [{
+            "slug": "nxsearth"
+          }]
+        }
+     }
    ]
 }
