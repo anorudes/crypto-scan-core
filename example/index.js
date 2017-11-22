@@ -1,7 +1,7 @@
 // This is just an example
 
 import CryptoMakerCore from '../src/';
-import CONFIG from './data.json';
+import CONFIG from './config.json';
 
 const FEED_INTERVAL = 5 * 60000;
 const COINMARKET_INTERVAL = 5 * 60000;
