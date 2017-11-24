@@ -1,5 +1,5 @@
 {
-  "name": "crypto-scan-parser",
+  "name": "crypto-scan-core",
   "version": "0.0.1",
   "description": "Making money with crypto",
   "main": "src/index.js",
