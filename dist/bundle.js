@@ -1152,8 +1152,8 @@ var CryptoScanCore = function (_CryptoScanParser) {
 
   _createClass(CryptoScanCore, [{
     key: 'getTokenFeed',
-    value: async function getTokenFeed(coinmarketSlug) {
-      var tokenData = this._getTokenData(coinmarketSlug);
+    value: async function getTokenFeed(coinmarketId) {
+      var tokenData = this._getTokenData(coinmarketId);
 
       if (tokenData && tokenData.feed) {
         var feed = tokenData.feed || {};
@@ -1179,8 +1179,8 @@ var CryptoScanCore = function (_CryptoScanParser) {
     }
   }, {
     key: 'getTokenPrice',
-    value: async function getTokenPrice(coinmarketSlug) {
-      var coinmarketData = await _axios2.default.get(_constants.COINMARKET_TICKER_ENDPOINT + '/' + coinmarketSlug, {
+    value: async function getTokenPrice(coinmarketId) {
+      var coinmarketData = await _axios2.default.get(_constants.COINMARKET_TICKER_ENDPOINT + '/' + coinmarketId, {
         params: {
           limit: 0
         }
@@ -1192,17 +1192,17 @@ var CryptoScanCore = function (_CryptoScanParser) {
     }
   }, {
     key: 'getTokenGraph',
-    value: async function getTokenGraph(coinmarketSlug, startTimestamp, endTimestamp) {
-      var endpoint = _constants.COINMARKET_GRAPH_ENDPOINT + '/' + coinmarketSlug + '/' + startTimestamp + '000/' + endTimestamp + '000';
+    value: async function getTokenGraph(coinmarketId, startTimestamp, endTimestamp) {
+      var endpoint = _constants.COINMARKET_GRAPH_ENDPOINT + '/' + coinmarketId + '/' + startTimestamp + '000/' + endTimestamp + '000';
       var coinmarketData = await _axios2.default.get(endpoint);
       return coinmarketData.data;
     }
   }, {
     key: '_getTokenData',
-    value: function _getTokenData(coinmarketSlug) {
+    value: function _getTokenData(coinmarketId) {
       var list = this.config.list;
       var tokenData = list.filter(function (item) {
-        return item.coinmarketSlug === coinmarketSlug;
+        return item.coinmarketId === coinmarketId;
       })[0];
 
       return tokenData;

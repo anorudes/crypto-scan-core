@@ -1,7 +1,7 @@
 {
    "list":[
       {
-         "coinmarketSlug":"rlc",
+         "coinmarketId":"rlc",
          "feed":{
             "reddit":[
                {
@@ -21,7 +21,7 @@
          }
       },
       {
-         "coinmarketSlug":"kin",
+         "coinmarketId":"kin",
          "feed":{
             "reddit":[
                {
@@ -44,7 +44,7 @@
          }
       },
       {
-         "coinmarketSlug":"ripio-credit-network",
+         "coinmarketId":"ripio-credit-network",
          "feed":{
             "reddit":[
                {
@@ -59,7 +59,7 @@
          }
       },
       {
-         "coinmarketSlug":"faircoin",
+         "coinmarketId":"faircoin",
          "feed":{
             "reddit":[
                {
@@ -77,7 +77,7 @@
          }
       },
       {
-         "coinmarketSlug":"nav-coin",
+         "coinmarketId":"nav-coin",
          "feed":{
             "reddit":[
                {
@@ -92,7 +92,7 @@
          }
       },
       {
-         "coinmarketSlug":"chainlink",
+         "coinmarketId":"chainlink",
          "feed":{
             "reddit":[
                {
@@ -105,7 +105,7 @@
          }
       },
       {
-         "coinmarketSlug":"monaco",
+         "coinmarketId":"monaco",
          "feed":{
             "reddit":[
                {
@@ -120,7 +120,7 @@
          }
       },
       {
-         "coinmarketSlug":"iocoin",
+         "coinmarketId":"iocoin",
          "feed":{
             "reddit":[
                {
@@ -135,7 +135,7 @@
          }
       },
       {
-         "coinmarketSlug":"achain",
+         "coinmarketId":"achain",
          "feed":{
             "twitter":[
                {
@@ -145,7 +145,7 @@
          }
       },
       {
-         "coinmarketSlug":"kucoin-shares",
+         "coinmarketId":"kucoin-shares",
          "feed":{
             "reddit":[
                {
@@ -160,7 +160,7 @@
          }
       },
       {
-         "coinmarketSlug":"nexus",
+         "coinmarketId":"nexus",
          "feed":{
             "reddit":[
                {

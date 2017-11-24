@@ -21,8 +21,8 @@ class CryptoScanCore extends CryptoScanParser {
     this.priceByToken = {};
   }
 
-  async getTokenFeed(coinmarketSlug: string) {
-    const tokenData = this._getTokenData(coinmarketSlug);
+  async getTokenFeed(coinmarketId: string) {
+    const tokenData = this._getTokenData(coinmarketId);
 
     if (tokenData && tokenData.feed) {
       const feed: Object = tokenData.feed || {};
@@ -46,8 +46,8 @@ class CryptoScanCore extends CryptoScanParser {
     return coinmarketData.data;
   }
 
-  async getTokenPrice(coinmarketSlug: string) {
-    const coinmarketData: Object = await axios.get(`${COINMARKET_TICKER_ENDPOINT}/${coinmarketSlug}`, {
+  async getTokenPrice(coinmarketId: string) {
+    const coinmarketData: Object = await axios.get(`${COINMARKET_TICKER_ENDPOINT}/${coinmarketId}`, {
       params: {
         limit: 0,
       }
@@ -58,16 +58,16 @@ class CryptoScanCore extends CryptoScanParser {
     }
   }
 
-  async getTokenGraph(coinmarketSlug: string, startTimestamp: number, endTimestamp: number) {
-    const endpoint:string = `${COINMARKET_GRAPH_ENDPOINT}/${coinmarketSlug}/${startTimestamp}000/${endTimestamp}000`;
+  async getTokenGraph(coinmarketId: string, startTimestamp: number, endTimestamp: number) {
+    const endpoint:string = `${COINMARKET_GRAPH_ENDPOINT}/${coinmarketId}/${startTimestamp}000/${endTimestamp}000`;
     const coinmarketData: Promise<any> = await axios.get(endpoint);
     return coinmarketData.data;
   }
 
-  _getTokenData(coinmarketSlug: string) {
+  _getTokenData(coinmarketId: string) {
     const list: Array<Object> = this.config.list;
     const tokenData:Object = list
-          .filter(item => item.coinmarketSlug === coinmarketSlug)[0]
+          .filter(item => item.coinmarketId === coinmarketId)[0]
 
     return tokenData;
   }
