@@ -1,5 +1,8 @@
 // @flow
-import rssParser from 'rss-parser';
+
+// TODO: https://github.com/bobby-brennan/rss-parser/issues/20
+const rssParser = require('rss-parser/dist/rss-parser.js')
+
 import removeHtmlTags from './utils/removeHtmlTags';
 
 class CryptoScanParser {
