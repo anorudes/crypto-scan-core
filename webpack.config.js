@@ -8,6 +8,9 @@ module.exports = {
     filename: 'bundle.js',
     libraryTarget: 'umd',
   },
+  node: {
+    fs: 'empty',
+  },
   module: {
     rules: [
       {
