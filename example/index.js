@@ -2,23 +2,22 @@
 
 import CryptoScanCore from '../src/';
 import CONFIG from './config.json';
-
 const cryptoScan = new CryptoScanCore(CONFIG);
 
+const MSECONDS_IN_HOUR = 3600000;
+
 async function start() {
-  // We set the interval parse feed in the config equal to 30 sec
-  // Therefore the data of each next token will be taken after delay
-  cryptoScan.parseTokensFeed();
+  const rlcFeed: ?Object = await cryptoScan.getTokenFeed('rlc');
+  console.log(rlcFeed);
 
-  // We set the interval parse coinmarket in the config equal to 10 sec
-  // Therefore the data of each next token will be taken after delay
-  cryptoScan.updateTokensPrice();
+  const rlcPrice: ?Object = await cryptoScan.getTokenPrice('rlc');
+  console.log(rlcPrice);
 
-  // First, there'll be many tokens with undefined data,
-  // because only the first token parsed after first call
-  setInterval(() => {
-    console.log(cryptoScan.getResult());
-  }, 40000);
+  const rlcGraph: ?Array<any> = await cryptoScan.getTokenGraph('rlc', Date.now() - MSECONDS_IN_HOUR , Date.now());
+  console.log(rlcGraph);
+
+  const tokensPrice: ?Array<Object> = await cryptoScan.getTokensPrice();
+  console.log(tokensPrice);
 }
 
 start();
