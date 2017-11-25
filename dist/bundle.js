@@ -6831,7 +6831,7 @@ var CryptoScanParser = function () {
 
       // Parse all feed url
 
-      if (!list) return [];
+      if (!list || !list[0]) return [];
       var result = [];
 
       return new Promise(function (resolve) {

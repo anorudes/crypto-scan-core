@@ -15,7 +15,7 @@ class CryptoScanParser {
   ): Promise<any> {
     // Parse all feed url
 
-    if (!list) return [];
+    if (!list || !list[0]) return [];
     const result = [];
 
     return new Promise((resolve: Function) => {
