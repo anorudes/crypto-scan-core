@@ -59,7 +59,7 @@ class CryptoScanCore extends CryptoScanParser {
   }
 
   async getTokenGraph(coinmarketId: string, startTimestamp: number, endTimestamp: number) {
-    const endpoint:string = `${COINMARKET_GRAPH_ENDPOINT}/${coinmarketId}/${startTimestamp}000/${endTimestamp}000`;
+    const endpoint:string = `${COINMARKET_GRAPH_ENDPOINT}/${coinmarketId}/${startTimestamp}000/${endTimestamp}000/`;
     const coinmarketData: Promise<any> = await axios.get(endpoint);
     return coinmarketData.data;
   }
