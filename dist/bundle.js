@@ -8896,7 +8896,7 @@ var CryptoScanCore = function (_CryptoScanParser) {
   }, {
     key: 'getTokenGraph',
     value: async function getTokenGraph(coinmarketId, startTimestamp, endTimestamp) {
-      var endpoint = _constants.COINMARKET_GRAPH_ENDPOINT + '/' + coinmarketId + '/' + startTimestamp + '000/' + endTimestamp + '000';
+      var endpoint = _constants.COINMARKET_GRAPH_ENDPOINT + '/' + coinmarketId + '/' + startTimestamp + '000/' + endTimestamp + '000/';
       var coinmarketData = await _axios2.default.get(endpoint);
       return coinmarketData.data;
     }
