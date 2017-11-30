@@ -7,15 +7,3 @@
 ## Config
 
 example/config.json
-
-## TODO:
-
-- [x] Init Crypto-scan-core
-- [x] Core and parser class
-- [x] Simple config and example
-- [x] Get reddit/twitter rss
-- [x] Get price from coinmarketapp
-- [x] Filter by users
-- [ ] Replace reddit/twitter rss parser with api
-- [ ] Get likes, comments
-- [ ] Add slack parser
