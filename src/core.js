@@ -30,8 +30,8 @@ class CryptoScanCore extends CryptoScanParser {
       const twitterFeed = await this.parseRSSFeed(feed.twitter, TWITTER_RSS_URL);
 
       return {
-        twitter: twitterFeed,
-        reddit: redditFeed,
+        twitter: this._sortFeedByDate(twitterFeed),
+        reddit: this._sortFeedByDate(redditFeed),
       };
     }
   }
@@ -62,6 +62,14 @@ class CryptoScanCore extends CryptoScanParser {
     const endpoint:string = `${COINMARKET_GRAPH_ENDPOINT}/${coinmarketId}/${startTimestamp}000/${endTimestamp}000/`;
     const coinmarketData: Promise<any> = await axios.get(endpoint);
     return coinmarketData.data;
+  }
+
+  _sortFeedByDate(feed) {
+    return feed
+      .sort((a, b) => new Date(a.date) > new Date(a.date)
+        ? 1
+        : -1
+      );
   }
 
   _getTokenData(coinmarketId: string) {

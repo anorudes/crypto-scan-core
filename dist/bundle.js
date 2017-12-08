@@ -8864,8 +8864,8 @@ var CryptoScanCore = function (_CryptoScanParser) {
         var twitterFeed = await this.parseRSSFeed(feed.twitter, _constants.TWITTER_RSS_URL);
 
         return {
-          twitter: twitterFeed,
-          reddit: redditFeed
+          twitter: this._sortFeedByDate(twitterFeed),
+          reddit: this._sortFeedByDate(redditFeed)
         };
       }
     }
@@ -8899,6 +8899,13 @@ var CryptoScanCore = function (_CryptoScanParser) {
       var endpoint = _constants.COINMARKET_GRAPH_ENDPOINT + '/' + coinmarketId + '/' + startTimestamp + '000/' + endTimestamp + '000/';
       var coinmarketData = await _axios2.default.get(endpoint);
       return coinmarketData.data;
+    }
+  }, {
+    key: '_sortFeedByDate',
+    value: function _sortFeedByDate(feed) {
+      return feed.sort(function (a, b) {
+        return new Date(a.date) > new Date(a.date) ? 1 : -1;
+      });
     }
   }, {
     key: '_getTokenData',
